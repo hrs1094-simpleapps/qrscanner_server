@@ -4,14 +4,14 @@ const pool = require("../config/db.config");
 // Create and Save a new Tutorial
 exports.findAll = async (req, res) => {
 
-    console.log("cal recieved 2");
+    //console.log("cal recieved 2");
     try {
         pool.query('SELECT * FROM tutorial', function (error, results) {
-          console.log(error, results);
+            //console.log(error, results);
             if (results) {
                 res.status(200).send(results.rows);
             } else {
-                res.status(500).send({ message: "Request Failed!" });
+                res.status(200).send({ message: "Request Failed!" });
             }
 
         });
