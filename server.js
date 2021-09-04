@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // simple route
 app.get("/", (req, res) => {
   console.log("cal recieved");
-  res.json({ message: "Welcome to test application." });
+  res.json({ message: "Welcome to test server application." });
   return;
 });
 
