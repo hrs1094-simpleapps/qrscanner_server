@@ -63,7 +63,7 @@ exports.create = (req, res) => {
     try {
         pool.query('INSERT INTO tutorial (title, description, published) values($1, $2, $3)', 
         [req.body.uuid, req.body.device+" : "+req.body.model+" : "+req.body.brand, 0], function (error, results) {
-            console.log(error, results.rows);
+           // console.log(error, results.rows);
             if (results) {
                 res.status(200).send(results.rows);
             } else {
