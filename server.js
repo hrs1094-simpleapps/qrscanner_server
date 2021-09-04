@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   console.log("cal recieved");
   res.json({ message: "Welcome to test application." });
+  return;
 });
 
 require("./app/routes/api.routes")(app);
